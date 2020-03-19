@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
-        <page name='ChapterOne'/>
-        <page name='ChapterTwo'/>
-        <page name='ChapterThree'/>
-        <page name='ChapterFour'/>
+        <page name='Chapter1'/>
+        <page name='Chapter2'/>
+        <page name='Chapter3'/>
+        <page name='Chapter4'/>
     </pages>
 </playground>

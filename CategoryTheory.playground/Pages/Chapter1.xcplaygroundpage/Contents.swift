@@ -55,4 +55,4 @@ func square(_ int: Int) -> Int {
 
 // When each node has an identity arrow, and possible compositions are drawn.
 
-//: [Chapter Two](ChapterTwo)
+//: [Chapter Two](Chapter2)

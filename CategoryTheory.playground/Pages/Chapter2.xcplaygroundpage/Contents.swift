@@ -1,6 +1,6 @@
 import Foundation
 
-//: [ChapterOne](ChapterOne)
+//: [ChapterOne](Chapter1)
 
 //: Chapter Two
 
@@ -85,4 +85,4 @@ func `true`(_: Bool) -> Bool { return true  }
 // Unit -> Bool = 2^1 = 2 (false, true)
 // Bool -> Bool = 2^2 = 4 (id_bool, false, true, inverse)
 
-//: [ChapterThree](ChapterThree)
+//: [ChapterThree](Chapter3)

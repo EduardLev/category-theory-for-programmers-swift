@@ -1,4 +1,4 @@
-//: [ChapterTwo](ChapterTwo)
+//: [ChapterTwo](Chapter2)
 
 import Foundation
 
@@ -48,4 +48,4 @@ import Foundation
 // Elements of the addition modulo 3 set are 0, 1, 2.
 // Morphisms are +0 mod 3, +1 mod 3, +2 mod 3
 
-//: [ChapterFour](ChapterFour)
+//: [ChapterFour](Chapter4)

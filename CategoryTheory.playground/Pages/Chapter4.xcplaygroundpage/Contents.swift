@@ -1,6 +1,6 @@
 import Foundation
 
-//: [ChapterThree](ChapterThree)
+//: [ChapterThree](Chapter3)
 
 func safe_root(_ x: Double) -> Double? {
   return x < 0 ? nil : sqrt(x)
