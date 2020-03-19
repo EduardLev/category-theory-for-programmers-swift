@@ -3,5 +3,7 @@
     <pages>
         <page name='ChapterOne'/>
         <page name='ChapterTwo'/>
+        <page name='ChapterThree'/>
+        <page name='ChapterFour'/>
     </pages>
 </playground>
