@@ -1,6 +1,6 @@
 import Foundation
 
-//: [ChapterThree](Chapter3)
+//: [Chapter Three](Chapter3)
 
 func safe_root(_ x: Double) -> Double? {
   return x < 0 ? nil : sqrt(x)
@@ -40,4 +40,4 @@ func safe_reciprocal(_ x: Double) -> Double? {
 let safe_root_reciprocal = safe_root >=> safe_reciprocal
 safe_root_reciprocal(9) // 0.333...
 
-//: [Next](@next)
+//: [Chapter Five](@Chapter5)
