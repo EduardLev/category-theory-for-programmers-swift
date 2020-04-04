@@ -137,4 +137,4 @@ In this case, A = Int and B = Bool.
  (Int, Bool, Bool) because you can map the first Bool to Right or the second Bool to Right.
  */
 
-//: [Next](@next)
+//: [Chapter Six](@Chapter6)
