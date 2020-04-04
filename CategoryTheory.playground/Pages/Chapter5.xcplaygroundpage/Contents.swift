@@ -128,6 +128,34 @@ In this case, A = Int and B = Bool.
  Therefore, continuing from the answer in part 6, we will be able to come up with a morphism from Int -> Either that preserves information, since we know that 0 and 1 must have from the Bool.
  
  However, since we can now go from Int to Either (by mapping 0 and 1 to T and F, and all other ints to .left) then we can also go from Either to Int by doing the opposite. Combined with the identity functions, this means Int and Either are isomorphic, so one is not better than the other.
+ 
+ Here is my sample `m` and `m'` for isomorphism between Either and Int in this case:
+ 
+ enum Either<A,B> {
+   case left(A)
+   case right(B)
+ }
+ 
+ func m(_ int: Int) -> Either<Int,Bool> {
+   if int == 0 {
+     return .right(true)
+   } else if int == 1 {
+     return .right(false)
+   } else if int < 0 {
+     return .left(int)
+   } else if int > 1 {
+     return .left(int - 2)
+   }
+ }
+
+ func mPrime(_ either: Either<Int, Bool>) -> Int {
+   switch either {
+   case let .left(int):
+     return int
+   case let .right(bool):
+      return bool ? 0 : 1
+   }
+ }
  */
 
 //: 8. Come up with an inferior candidate for a coproduct of Int and Bool that acnnot be better than Either because it allows multiple acceptable morphisms from it to Either.
