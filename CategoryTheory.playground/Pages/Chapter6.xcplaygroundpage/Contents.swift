@@ -36,7 +36,7 @@ enum Shape {
 func area(shape: Shape) -> Double {
   switch shape {
   case let .circle(radius):
-    return pi * radius * radius
+    return Double.pi * radius * radius
   case let .rectangle(depth, height):
     return depth * height
   }
@@ -51,7 +51,7 @@ func area(shape: Shape) -> Double {
 func circ(_ shape: Shape) -> Double {
   switch shape {
   case let .circle(radius):
-    return 2.0 * pi * radius
+    return 2.0 * Double.pi * radius
   case let .rectangle(depth, height):
     return 2.0 * (depth + height)
   }
@@ -92,4 +92,4 @@ func circ(_ shape: Shape) -> Double {
  g . f --> maps .right(a) to (false, a) to .right(a) = id
  */
 
-//: [Next](@next)
+//: [Chapter Seven](@Chapter7)
