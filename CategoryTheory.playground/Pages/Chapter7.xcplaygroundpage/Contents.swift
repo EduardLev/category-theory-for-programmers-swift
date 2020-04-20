@@ -45,7 +45,42 @@ import Foundation
 
 //: 3: Implement the reader functor in your second favorite language (Swift):
 
+// Reader is a wrapper type for R -> A
+struct Reader<R, A> {
+  let function: (R) -> A
+}
 
+func fmap<R, A, B>(_ f: @escaping (A) -> B) -> (Reader<R, A>) -> Reader<R, B> {
+  return { initialReader in
+    Reader(function: initialReader.function∘f)
+  }
+}
 
 //: 4: Prove the functor laws for the list functor. Assume that the laws are true for the
 //:    tail part of the list you're applying it to.
+
+enum List<A> {
+  case empty
+  indirect case list(A, List)
+}
+
+func fmap<A, B>(_ f: @escaping (A) -> B) -> ((List<A>) -> List<B>) {
+  return { listA in
+    switch listA {
+    case .empty:
+      return .empty
+    case let .list(head, tail):
+      return .list(f(head), fmap(f)(tail))
+    }
+  }
+}
+
+// 1) Identity Preservation, fmap id_a = id_listA
+// fmap id_a empty = fmap empty = empty = id empty
+// fmap id_a list = list(id(a), fmap(id)(tail) = list(a, fmap(tail) = list(a, tail) = id list(a, tail)
+
+// 2) Composition Preservation fmap (g . f) = fmap g . fmap f
+// fmap (g . f) empty = empty = fmap g empty = fmap g (fmap f empty) = fmap g . fmap f (empty)
+// fmap (g . f) list = list(g.f(head), fmap(g.f)(tail)) = list(g.f(head), (fmap g . fmap f (tail))
+//  list(g( f (head), (fmap g . fmap f(tail)) = fmap g list(f(head), fmap f(tail))
+//  = fmap g . fmap f (list(head), tail)
