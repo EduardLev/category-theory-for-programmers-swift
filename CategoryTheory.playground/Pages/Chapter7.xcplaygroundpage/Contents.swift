@@ -45,9 +45,7 @@ import Foundation
 
 //: 3: Implement the reader functor in your second favorite language (Swift):
 
-func reader<A, B>(b: B) -> (A) -> B {
-  return { _ in b }
-}
+
 
 //: 4: Prove the functor laws for the list functor. Assume that the laws are true for the
 //:    tail part of the list you're applying it to.
