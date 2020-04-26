@@ -84,3 +84,5 @@ func fmap<A, B>(_ f: @escaping (A) -> B) -> ((List<A>) -> List<B>) {
 // fmap (g . f) list = list(g.f(head), fmap(g.f)(tail)) = list(g.f(head), (fmap g . fmap f (tail))
 //  list(g( f (head), (fmap g . fmap f(tail)) = fmap g list(f(head), fmap f(tail))
 //  = fmap g . fmap f (list(head), tail)
+
+//: [Chapter Seven](@Chapter7)
