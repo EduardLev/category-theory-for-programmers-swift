@@ -18,4 +18,4 @@ func bimap<A,B,C,D>(_ f: @escaping ((A) -> C), _ g: @escaping ((B) -> D)) -> (Pa
 let pair = Pair(first: 1, second: "Second")
 print(bimap( { $0 }, { $0 })(pair))
 
-//: [Next](@next)
+//: [Chapter 9](@Chapter9)
