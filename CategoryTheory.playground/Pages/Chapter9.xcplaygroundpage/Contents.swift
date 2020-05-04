@@ -1,7 +1,5 @@
 //: [Chapter 8](@Chapter8)
 
-import Foundation
+// No exercises
 
-var str = "Hello, playground"
-
-//: [Next](@next)
+//: [Chapter 10](@Chapter10)
