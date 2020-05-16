@@ -15,18 +15,6 @@ import Foundation
  This is OK in the case of Nothing, but not in the case of Just x.
  */
 
-/*
- f :: Maybe a -> Either () a
- f = if a == nil, return .left
-     if a != nil, return .right(a)
- 
- g :: Either () a -> Maybe a
- g = if .left, return nil (Nothing)
-     if .right(a), return a (Just a)
- 
- So, there is an invertible morphism between both that returns id in both cases.
- */
-
 //: 2: Prove functor laws for the reader functor:
 /*
  1) Identity Preservation, fmap id_a = id_reader
