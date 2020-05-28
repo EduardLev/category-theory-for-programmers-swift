@@ -96,6 +96,4 @@ func natFive<T>(_ reader: (Bool) -> T) -> Maybe<T> {
 
 //: 4 Show that the horizontal composition of natural transformation satisfies the naturality condition (hint: use components). It's a good exercise in diagram chasing.
 
-
-
 //: [Next](@next)
